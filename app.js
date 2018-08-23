@@ -10,6 +10,7 @@ $scope.setInclude = function(file){
 }
 
 $scope.changeInclude = function(file){
+    if($scope.htmlFile == `templates/${file}`) return;
     $scope.errorF = '';
     $scope.classLoader = '';
     $scope.htmlFile = `templates/${file}`;
