@@ -17,6 +17,12 @@ $scope.changeInclude = function(file){
     
 }
 
+$scope.changeClass = function(path){
+
+    if(`templates/${path}` == $scope.htmlFile) return "activeTab";
+
+}
+
 $scope.$on("$includeContentLoaded",function(event,templete){
     
     $scope.classLoader = 'opacity_hide';
