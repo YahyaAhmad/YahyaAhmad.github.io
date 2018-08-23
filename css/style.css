@@ -92,6 +92,7 @@ body{
 	padding: 30px 5%;
 	overflow: scroll;
 	overflow-y: auto;
+	overflow-x: hidden;
 	height:65vh;
 }
 
