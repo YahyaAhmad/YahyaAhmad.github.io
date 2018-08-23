@@ -27,6 +27,7 @@
 					<nav class="bottom nav justify-content-center">
 						<div ng-click="changeInclude('home.html')" class="nav-item my-button">HOME</div>
 						<div ng-click="changeInclude('info.html')" class="nav-item my-button">EXPERIENCE</div>
+						<div ng-click="changeInclude('info.html')" class="nav-item my-button">CATALOGS</div>
 					</nav>
 					
 		
@@ -34,7 +35,7 @@
 		</div>
 		
 		<div class="body" >
-			<div class="loader"></div>
+			<div class="loader {{classLoader}}"></div>
 			<div ng-include="htmlFile" class="content-holder">
 			
 
