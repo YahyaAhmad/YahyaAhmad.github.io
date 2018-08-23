@@ -1,0 +1,179 @@
+
+.header{
+
+	background-color: #5782f9;
+	height: 35vh;
+	position: relative;
+
+
+}
+
+span{
+	display: block;
+}
+
+span span {
+	display: inline;
+}
+
+body{
+	padding: 0;
+	background-color: #fcfcfc;
+}
+
+.container-fluid{
+	padding: 0;
+}
+
+.body{
+	
+	padding: 0px 20%;
+	color: #555;
+
+}
+
+.my-button{
+
+	color: #ddd;
+	padding: 15px;
+	font-family: Open Sans,serif;
+	text-align: center;
+	font-size: 18pt;
+	user-select: none;
+	cursor: pointer;
+	transition: 0.2s;
+
+}
+
+.my-button:hover{
+
+	color: white;
+}
+
+.bottom{
+	bottom: 0;
+	left: 50%;
+	 -webkit-transform: translateX(-50%);
+  	transform: translateX(-50%);
+	position: absolute;
+}
+
+.ps-picture{
+	display: inline-block;
+	margin:auto;
+	position: absolute;
+	z-index: 5;
+	left: 0;
+	right: 0;
+	margin-top: 15px;
+	width: 150px;
+	height: 150px;
+	background-color: red;
+	border-radius: 50%;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: cover;
+	background-image: url("../image.jpeg");
+}
+
+.display-3{
+	font-weight: 400;
+	font-family: Saira Extra Condensed,serif;
+	font-size: 85pt;
+}
+
+.content-holder{
+	position: absolute;
+	left: 0;
+	right: 0;
+	width: 100%;
+	
+	margin: auto;
+	padding: 30px 5%;
+	overflow: scroll;
+	overflow-y: auto;
+	height:65vh;
+}
+
+.normal-text{
+	font-size: 18pt;
+}
+
+@media (max-width: 576px) {
+
+	.normal-text{
+		font-size: 12pt;
+	}
+
+	.display-3{
+		font-size: 50pt;
+	}
+
+}
+
+table{
+	width: 400px;
+}
+
+.nav-link{
+	color:#555;
+}
+
+.nav-link:hover{
+	text-decoration: underline;
+	color: #555;
+}
+
+.heading-1{
+	font-weight: 500;
+	font-size: 22pt;
+	font-family: Saira Extra Condensed,serif;
+}
+
+.heading-2{
+	font-size: 14pt;
+	color: #888;
+	margin-left: 20px;
+	margin-top: 10px;
+	
+}
+
+.par-1 > .heading-2 ~ .heading-2{
+	margin-top: 30px;
+
+}
+
+
+.body-1{
+	font-size: 12pt;
+	color:#aaa;
+	margin-left: 40px;
+	margin-top: 10px;
+}
+
+
+.par-1{
+	margin-top: 55px;
+}
+
+.par-1:first-of-type{
+	margin-top: 0;
+}
+
+.par-2{
+	margin-top: 30px;
+}
+
+.par-2:first-child{
+	margin-top: 0;
+}
+
+.centerBox{
+
+	width: fit-content;
+	position:absolute;
+	left: 0;
+	right: 0;
+	margin:auto;
+
+}
