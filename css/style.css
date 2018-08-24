@@ -2,9 +2,10 @@
 .header{
 
 	background-color: #5782f9;
-	height: 35vh;
+	
 	position: relative;
-
+	transition:0.5s;
+	height: 35vh;
 
 }
 
@@ -38,7 +39,7 @@ body{
 	padding: 15px;
 	font-family: Open Sans,serif;
 	text-align: center;
-	font-size: 18pt;
+	font-size: 1.8vw;
 	user-select: none;
 	cursor: pointer;
 	transition: 0.2s;
@@ -57,11 +58,16 @@ body{
 	 -webkit-transform: translateX(-50%);
   	transform: translateX(-50%);
 	position: absolute;
+	transition:0.5s;
 }
 
 .ps-picture{
 	display: inline-block;
 	margin:auto;
+	transform: translate3d(0,0,0);
+	visibility: visible;
+	opacity: 1;
+	transition: 0.5s;
 	position: absolute;
 	z-index: 5;
 	left: 0;
@@ -89,13 +95,12 @@ body{
 	left: 0;
 	right: 0;
 	width: 100%;
-	
 	margin: auto;
 	padding: 30px 5%;
 	overflow: scroll;
 	overflow-y: auto;
 	overflow-x: hidden;
-	height:65vh;
+	height:65vh;	
 }
 
 .normal-text{
@@ -104,12 +109,19 @@ body{
 
 @media (max-width: 576px) {
 
+	
+
 	.normal-text{
 		font-size: 12pt;
 	}
 
 	.display-3{
 		font-size: 50pt;
+	}
+
+	.bottom{
+		width:100%;
+
 	}
 
 }
@@ -220,3 +232,66 @@ a:hover{
 .activeTab{
 	color:white;
 }
+
+
+
+@media (max-width: 576px) {
+
+	.ps-picture{
+		visibility: hidden;
+		opacity: 0;
+		transform: translate3d(0,-100%,0);
+	}
+
+	.content-holder{
+		height: 88vh;
+	}
+
+	.header{
+		
+		height: 12vh;
+	}
+
+	.bottom{
+		display: block;
+		opacity: 0;
+		
+		position: absolute;
+		
+		
+	}
+	.my-button{
+		font-size: 10pt;
+		width: fit-content;
+	}
+
+}
+
+.toggle-button{
+	height: 40px;
+	width: 40px;
+	position: absolute;
+	right: 10px;
+
+	bottom: 15px;
+
+	z-index: 90;
+	
+
+}
+
+.header.shown{
+	height: 35vh;
+}
+
+.bottom.shown{
+	opacity: 1;
+	
+	
+}
+
+.content-holder.shown{
+	height: 65vh;
+}
+
+
