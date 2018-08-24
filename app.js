@@ -42,7 +42,7 @@ app.service('modalService',function(){
 
 app.controller("test",function($scope,$interval,$timeout,modalService,$sce){
 $scope.stop = undefined;
-$scope.shown = true;
+$scope.shown = false;
 $scope.exitClickable = true;
 $scope.showPopup = false;
 $scope.trust = $sce.trustAsHtml;

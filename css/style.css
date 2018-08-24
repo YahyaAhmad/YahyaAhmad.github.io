@@ -39,7 +39,7 @@ body{
 	padding: 15px;
 	font-family: Open Sans,serif;
 	text-align: center;
-	font-size: 1.8vw;
+	font-size: 15pt;
 	user-select: none;
 	cursor: pointer;
 	transition: 0.2s;
@@ -59,6 +59,7 @@ body{
   	transform: translateX(-50%);
 	position: absolute;
 	transition:0.5s;
+	flex-wrap: nowrap;
 }
 
 .ps-picture{
@@ -82,6 +83,10 @@ body{
 	background-size: cover;
 	background-image: url("../image.jpeg");
 	border: 7px solid #eee;
+}
+
+.shifted{
+	margin-left: 150px;
 }
 
 .display-3{
@@ -112,11 +117,12 @@ body{
 	
 
 	.normal-text{
-		font-size: 12pt;
+		font-size: 3.5vw;
 	}
 
 	.display-3{
-		font-size: 50pt;
+		font-size: 13vw;
+		
 	}
 
 	.bottom{
@@ -141,7 +147,7 @@ a:hover{
 
 .heading-1{
 	font-weight: 500;
-	font-size: 22pt;
+	font-size: 21pt;
 	font-family: Saira Extra Condensed,serif;
 }
 
@@ -233,7 +239,17 @@ a:hover{
 	color:white;
 }
 
+.toggle-button{
+	height: 10vh;
+	width: 10vh;
+	position: absolute;
+	right:0;
+	bottom: 0;
+	text-align: center;
+	z-index: 90;
+	display: none;	
 
+}
 
 @media (max-width: 576px) {
 
@@ -243,13 +259,17 @@ a:hover{
 		transform: translate3d(0,-100%,0);
 	}
 
+	.shifted{
+		margin-left:15vw;
+	}
+
 	.content-holder{
 		height: 88vh;
 	}
 
 	.header{
 		
-		height: 12vh;
+		height: 10vh;
 	}
 
 	.bottom{
@@ -261,24 +281,18 @@ a:hover{
 		
 	}
 	.my-button{
-		font-size: 10pt;
+		font-size: 2.5vh;
+		padding: 2.5vh;
 		width: fit-content;
+	}
+
+	.toggle-button{
+		display:block;
 	}
 
 }
 
-.toggle-button{
-	height: 40px;
-	width: 40px;
-	position: absolute;
-	right: 10px;
 
-	bottom: 15px;
-
-	z-index: 90;
-	
-
-}
 
 .header.shown{
 	height: 35vh;
