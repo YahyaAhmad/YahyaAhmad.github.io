@@ -118,11 +118,11 @@ table{
 	width: 400px;
 }
 
-.nav-link{
+a{
 	color:#555;
 }
 
-.nav-link:hover{
+a:hover{
 	text-decoration: underline;
 	color: #555;
 }

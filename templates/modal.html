@@ -1,0 +1,17 @@
+<div class="popup-modal">
+
+
+        <div ng-click="changeShow('')" ng-show='showPopup' class="black-background"></div>
+    
+        <div ng-show='showPopup' class="popup">
+                <i ng-click="changeShow('')" class="fas fa-times"></i>
+                
+                <div class="popup-body">
+                    <div class="popup-header">{{header}}</div>
+                    <div class="popup-text" ng-bind-html="trust(body)"></div>
+    
+                   
+            
+                </div>
+        </div>
+    </div>
