@@ -317,11 +317,26 @@ a:hover{
 button.toggle-button{
 	background-color: transparent;
 	border: transparent;
-	transition: color 0.5s;
+	transition: color 1.25s;
 }
 
 button.toggle-button:focus{
-	color:#ddd;
+	
 	outline: none;
 
 }
+
+button.toggle-button:not(:active){
+	
+	color:black;
+
+}
+
+button.toggle-button:active{
+	
+	color:white;
+	transition: color 0.05s;
+
+}
+
+

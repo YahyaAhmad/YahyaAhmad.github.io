@@ -15,6 +15,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
 	<script src="https://code.angularjs.org/1.7.2/angular-animate.min.js"></script>
 	<script src="ui-bootstrap-tpls-2.5.0.min.js" ></script>
+	<script src="ngDrag.js"></script>
 	<script src="app.js"></script>
 	<link rel="stylesheet" href="css/popup.css">
 	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
@@ -47,7 +48,7 @@
 				<dir-message></dir-message>
 				<dir-image></dir-image>
 			<div class="loader {{classLoader}}"></div>
-			<div ng-include="htmlFile" ng-class='{"shown" : shown}' class="content-holder {{errorF}}">
+			<div ng-include="htmlFile" ng-class='{"shown" : shown}' ng-touchstart='hideBar()' ng-click='hideBar()'  class="content-holder {{errorF}}">
 			
 
 			</div>

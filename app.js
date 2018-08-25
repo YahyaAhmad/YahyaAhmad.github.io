@@ -1,4 +1,4 @@
-var app = angular.module("pageApp",["ngAnimate"]);
+var app = angular.module("pageApp",["ngAnimate","ngTouch"]);
 
 app.directive('dirMessage',function(){
 
@@ -62,6 +62,10 @@ $scope.toggleBar = function(){
     $scope.shown = !$scope.shown;
     
 
+}
+
+$scope.hideBar = function(){
+    $scope.shown = false;
 }
 
 $timeout(function(){ $scope.htmlFile = 'templates/home.html'; },500);
