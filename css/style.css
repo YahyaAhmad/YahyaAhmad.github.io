@@ -73,8 +73,7 @@ body{
 	margin:auto;
 	border: 7px solid #eee;
 	transform: translate3d(0,0,0);
-	
-	transition: 0.5s;
+
 	position: absolute;
 	z-index: 5;
 	left: 0;
@@ -256,10 +255,37 @@ a:hover{
 
 }
 
+.ps-picture{
+    transition: opacity 1s, transform 0.5s;
+}
+
+.ps-picture.ng-hide-remove{
+    opacity: 0;
+    
+    
+  
+}
+
+.ps-picture.ng-hide-remove-active{
+    opacity: 1;
+   
+}
+
+.ps-picture.ng-hide-add{
+    opacity: 1;
+  
+}
+
+.ps-picture.ng-hide-add-active{
+    opacity: 0;
+ 
+}
+
+
 @media (max-width: 576px) {
 
 	.ps-picture{
-		visibility: hidden;
+		
 		opacity: 0;
 		transform: translate3d(0,-100%,0);
 	}
