@@ -63,6 +63,7 @@ body{
 }
 
 .ps-picture{
+	cursor: pointer;
 	display: inline-block;
 	margin:auto;
 	transform: translate3d(0,0,0);

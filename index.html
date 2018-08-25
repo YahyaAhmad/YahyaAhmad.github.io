@@ -18,7 +18,7 @@
 	<script src="app.js"></script>
 	<link rel="stylesheet" href="css/popup.css">
 	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-
+	<link rel="stylesheet" href="css/image.css">
 	
 
 </head>
@@ -27,14 +27,14 @@
 	<div class="container-fluid" ng-controller="test">
 
 		<div class="header-parent">
-			<div class="ps-picture"></div>
+			<div ng-click='changeImageShow("image.jpeg")' class="ps-picture"></div>
 			<div class="header" ng-class='{"shown" : shown}'>
 					
 					<button  ng-click='toggleBar()' class="toggle-button"><i class="fas fa-bars"></i></button>
 					<nav id="bottomNav" ng-class='{"shown" : shown}' class="bottom nav justify-content-center nav-justified">
 						<div ng-class="changeClass('home.html');" ng-click="changeInclude('home.html')" class="nav-item my-button">HOME</div>
 						<div ng-class="changeClass('info.html');" ng-click="changeInclude('info.html')" class="nav-item my-button">EXPERIENCE</div>
-						<div ng-class="changeClass('info2.html');" ng-click="changeInclude('info2.html')" class="nav-item my-button">EDUCATION</div>
+						<div ng-class="changeClass('edu.html');" ng-click="changeInclude('info2.html')" class="nav-item my-button">EDUCATION</div>
 						<div ng-class="changeClass('info2.html');" ng-click="changeInclude('info2.html')" class="nav-item my-button">CATALOGS</div>
 						
 					</nav>
@@ -45,6 +45,7 @@
 		
 		<div class="body" >
 				<dir-message></dir-message>
+				<dir-image></dir-image>
 			<div class="loader {{classLoader}}"></div>
 			<div ng-include="htmlFile" ng-class='{"shown" : shown}' class="content-holder {{errorF}}">
 			

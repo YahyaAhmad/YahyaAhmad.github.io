@@ -1,0 +1,40 @@
+.image-popup{
+
+    border-radius: 50%;
+    position: absolute;
+    overflow: hidden;
+    width: 400px;
+    height: 400px;
+    z-index: 101;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top:15%;
+ 
+}
+
+.image-popup img{
+    width: 400px;
+    
+}
+
+
+.image-popup.ng-hide-remove{
+    opacity: 0;
+    transform: translate3d(0,-100%,0);
+}
+
+.image-popup.ng-hide-remove-active{
+    opacity: 1;
+    transform: translate3d(0,0,0);
+}
+
+.image-popup.ng-hide-add{
+    opacity: 1;
+    transform: translate3d(0,0,0);
+}
+
+.image-popup.ng-hide-add-active{
+    opacity: 0;
+    transform: translate3d(0,-100%,0);
+}

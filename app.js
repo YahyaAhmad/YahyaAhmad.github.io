@@ -10,6 +10,15 @@ app.directive('dirMessage',function(){
 
 });
 
+app.directive('dirImage',function(){
+
+
+    return{
+        templateUrl:'templates/image.html'
+    };
+
+});
+
 app.service('modalService',function(){
 
     this.makeMessage = function(type){
@@ -42,10 +51,12 @@ app.service('modalService',function(){
 
 app.controller("test",function($scope,$interval,$timeout,modalService,$sce){
 $scope.stop = undefined;
+$scope.showImagePopup = false;
 $scope.shown = false;
 $scope.exitClickable = true;
 $scope.showPopup = false;
 $scope.trust = $sce.trustAsHtml;
+$scope.imageUrl = 'image.jpeg';
 $scope.toggleBar = function(){
 
     $scope.shown = !$scope.shown;
@@ -54,6 +65,19 @@ $scope.toggleBar = function(){
 }
 
 $timeout(function(){ $scope.htmlFile = 'templates/home.html'; },500);
+
+$scope.changeImageShow = function(type){
+
+    if(type==''){
+        if(!$scope.exitClickable) return;
+        $scope.exitClickable = false;
+        $scope.showImagePopup = false;
+        return;
+    }
+    $scope.exitClickable = true;
+    $scope.showImagePopup = !$scope.showImagePopup;
+
+}
 
 $scope.changeShow = function(type){ 
 
