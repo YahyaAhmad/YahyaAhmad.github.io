@@ -256,7 +256,7 @@ a:hover{
 }
 
 .ps-picture{
-    transition: opacity 1s, transform 0.5s;
+    transition: opacity 1s, transform 0.5s, visibility 0.5s;
 }
 
 .ps-picture.ng-hide-remove{
@@ -288,6 +288,7 @@ a:hover{
 		
 		opacity: 0;
 		transform: translate3d(0,-100%,0);
+		visibility: hidden;
 	}
 
 	.shifted{
