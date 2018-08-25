@@ -68,7 +68,7 @@ $scope.hideBar = function(){
     $scope.shown = false;
 }
 
-$timeout(function(){ $scope.htmlFile = 'templates/home.html'; },500);
+// $timeout(function(){ $scope.htmlFile = 'templates/home.html'; },500);
 
 $scope.changeImageShow = function(type){
 
@@ -142,18 +142,13 @@ $scope.$on("$includeContentError",function(event,templete){
 app.controller('pictureController',function($scope,$timeout){
 
     $scope.showPicture = true;
-    // angular.element(document).ready(function(){
+    angular.element(document).ready(function(){
 
-    //     $timeout},500);
+        $timeout(function(){ $scope.showPicture = false; $scope.$parent.htmlFile = 'templates/home.html'; },500);
 
-    // });
+    });
 
-    $scope.$watch('$viewContentLoaded', 
-    function() { 
-        $timeout(function() {
-            $scope.showPicture = false;
-            
-        },500);    
-});
+  
+
 
 });
