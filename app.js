@@ -144,7 +144,7 @@ app.controller('pictureController',function($scope,$timeout){
     $scope.showPicture = true;
     angular.element(document).ready(function(){
 
-        $timeout(function(){ $scope.showPicture = false; $scope.$parent.htmlFile = 'templates/home.html'; },500);
+        $timeout(function(){ $scope.showPicture = false; $scope.$parent.htmlFile = 'templates/home.html'; },1500);
 
     });
 
