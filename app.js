@@ -138,3 +138,15 @@ $scope.$on("$includeContentError",function(event,templete){
 
     
 });
+
+app.controller('pictureController',function($scope,$timeout){
+
+    $scope.showPicture = false;
+    angular.element(document).ready(function(){
+
+        $timeout(function(){$scope.showPicture = true;},500);
+
+    });
+
+
+});

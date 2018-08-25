@@ -38,3 +38,26 @@
     opacity: 0;
     transform: translate3d(0,-100%,0);
 }
+
+
+
+.ps-picture.ng-hide-remove{
+    opacity: 0;
+  
+}
+
+.ps-picture.ng-hide-remove-active{
+    opacity: 1;
+  
+}
+
+.ps-picture.ng-hide-add{
+    opacity: 1;
+    
+}
+
+.ps-picture.ng-hide-add-active{
+    opacity: 0;
+ 
+}
+
