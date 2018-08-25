@@ -9,6 +9,10 @@
 
 }
 
+.ps-picture.hide{
+    opacity: 0;
+}
+
 span{
 	display: block;
 }
@@ -63,12 +67,13 @@ body{
 }
 
 .ps-picture{
+	
 	cursor: pointer;
 	display: inline-block;
 	margin:auto;
+	border: 7px solid #eee;
 	transform: translate3d(0,0,0);
-	visibility: visible;
-	opacity: 1;
+	
 	transition: 0.5s;
 	position: absolute;
 	z-index: 5;
@@ -77,13 +82,12 @@ body{
 	margin-top: 15px;
 	width: 22vh;
 	height: 22vh;
-
 	border-radius: 50%;
 	background-repeat: no-repeat;
 	background-position: center top;
 	background-size: cover;
 	background-image: url("../image.jpeg");
-	border: 7px solid #eee;
+	
 }
 
 .shifted{

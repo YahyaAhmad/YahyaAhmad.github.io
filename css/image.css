@@ -39,25 +39,32 @@
     transform: translate3d(0,-100%,0);
 }
 
-
+.ps-picture{
+    transition: 1.5s;
+}
 
 .ps-picture.ng-hide-remove{
     opacity: 0;
+    visibility: hidden;
+    
   
 }
 
 .ps-picture.ng-hide-remove-active{
     opacity: 1;
-  
+    visibility: visible;
 }
 
 .ps-picture.ng-hide-add{
     opacity: 1;
-    
+    visibility: visible;
 }
 
 .ps-picture.ng-hide-add-active{
     opacity: 0;
- 
+    visibility: hidden;
 }
 
+.ps-picture.hide{
+    opacity: 0;
+}
