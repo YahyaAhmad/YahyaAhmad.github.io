@@ -291,6 +291,10 @@ a:hover{
 		display:block;
 	}
 
+	.centerBox{
+		margin-top: 20vw;
+	}
+
 }
 
 
@@ -310,3 +314,14 @@ a:hover{
 }
 
 
+button.toggle-button{
+	background-color: transparent;
+	border: transparent;
+	transition: color 0.5s;
+}
+
+button.toggle-button:focus{
+	color:#ddd;
+	outline: none;
+
+}
