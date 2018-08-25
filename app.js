@@ -37,7 +37,7 @@ app.service('modalService',function(){
             
             messageObject = {
             header: "MY CV",
-            body: "<a href='yahya_ahmad_cv.docx'>DOWNLOAD</a>"
+            body: "<a href='yahya_ahmad_cv.pdf'>DOWNLOAD</a>"
            };
         }
 
