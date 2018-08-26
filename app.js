@@ -114,6 +114,7 @@ $scope.changeImageShow = function(type){
         if(!$scope.exitClickable) return;
         $scope.exitClickable = false;
         $scope.showImagePopup = false;
+        
         console.log("ChangeImage");
         return;
     }

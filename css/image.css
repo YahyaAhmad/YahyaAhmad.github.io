@@ -77,3 +77,15 @@
     top: 50%;
     transform: translate(-50%,-50%);
 }
+
+@media (max-width: 576px) {
+
+	.not-circle{
+		width:95vw;
+		
+	}
+
+	.not-circle img{
+		width: 95vw;
+    }
+}
