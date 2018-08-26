@@ -9,16 +9,28 @@
     left: 0;
     right: 0;
     margin: auto;
-    top:15%;
+    top:0;
+    bottom: 0;
+   
  
 }
 
 .image-popup img{
     width: 400px;
     
+    
 }
 
+.not-circle{
+    width:65vw;
+    border-radius: 0;
+    height: fit-content;
+    display: table;
+}
 
+.not-circle img{
+    width: 65vw;
+}
 .image-popup.ng-hide-remove{
     opacity: 0;
     transform: translate3d(0,-100%,0);

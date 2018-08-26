@@ -57,9 +57,21 @@ app.service('modalService',function(){
 
 });
 
+app.directive('myEnter', function () {
+    return function (scope, element, attrs) {
+        element.bind("keydown keypress", function (event) {
+            if(event.which === 65) {
+                scope.$apply(function (){
+                    scope.$eval(attrs.myEnter);
+                });
 
+                event.preventDefault();
+            }
+        });
+    };
+});
 
-app.controller("test",function($scope,$interval,$timeout,modalService,$sce){
+app.controller("test",function($scope,$interval,$timeout,modalService,$sce,$document){
 $scope.stop = undefined;
 $scope.started = false;
 $scope.showImagePopup = false;
@@ -97,17 +109,31 @@ $scope.hideBar = function(){
 // $timeout(function(){ $scope.htmlFile = 'templates/home.html'; },500);
 
 $scope.changeImageShow = function(type){
-
+    
     if(type==''){
         if(!$scope.exitClickable) return;
         $scope.exitClickable = false;
         $scope.showImagePopup = false;
+        console.log("ChangeImage");
         return;
     }
+    if(type!='image.jpeg') $scope.notCircle = true;
+    else $scope.notCircle = false;
+    $scope.imageUrl = type;
     $scope.exitClickable = true;
     $scope.showImagePopup = !$scope.showImagePopup;
 
 }
+
+$document.bind('keydown', function(event){
+    if(event.which===27){
+        $scope.$apply(function(){
+            $scope.showImagePopup = false;
+            $scope.changeImageShow('');
+        });
+        
+    }
+});
 
 $scope.changeShow = function(type){ 
 

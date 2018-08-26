@@ -121,11 +121,11 @@ body{
 	
 
 	.normal-text{
-		font-size: 3.5vw;
+		font-size: 4.5vw;
 	}
 
 	.display-3{
-		font-size: 13vw;
+		font-size: 16vw;
 		
 	}
 
@@ -196,6 +196,7 @@ a:hover{
 .centerBox{
 
 	width: fit-content;
+	display: table;
 	position:absolute;
 	left: 0;
 	right: 0;
@@ -335,6 +336,7 @@ a:hover{
 
 	.content-holder{
 		height: 88vh;
+		transition: height 0.5s;
 	}
 
 	.header{
@@ -427,4 +429,8 @@ button.toggle-button:active{
 
 .project{
 	margin-bottom: 40px;
+}
+
+.cache{
+	display: none;
 }
