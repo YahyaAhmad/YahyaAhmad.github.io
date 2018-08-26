@@ -281,8 +281,46 @@ a:hover{
  
 }
 
+.photo-container{
+	width: inherit;
+	height: 22vw;
+	position: relative;
+}
+
+.box-photo{
+	height: 17vw;
+    position: absolute;
+    margin: auto;
+    left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	max-width: 33vw;
+	box-shadow:  2px 2px 0 0.01px white;
+	transition: box-shadow 1.5s;
+	
+	
+}
+
+.box-photo:hover{
+	transition: box-shadow 0.25s;
+	box-shadow:  2px 2px 8px 1px rgb(87, 87, 87);
+}
+
 
 @media (max-width: 576px) {
+
+
+	.box-photo{
+		
+		height: 40vw;
+		max-width: 78vw;
+	}
+
+
+	.photo-container{
+		height: 50vw;
+	}
 
 	.ps-picture{
 		
@@ -370,4 +408,23 @@ button.toggle-button:active{
 
 }
 
+.my-box{
 
+	
+
+}
+
+.box-header{
+	text-align: center;
+	margin: 0;
+}
+
+
+.projects
+{
+	margin-top: 50px;
+}
+
+.project{
+	margin-bottom: 40px;
+}

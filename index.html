@@ -34,8 +34,8 @@
 					<nav id="bottomNav" ng-class='{"shown" : shown}' class="bottom nav justify-content-center nav-justified">
 						<div ng-class="changeClass('home.html');" ng-click="changeInclude('home.html')" class="nav-item my-button">HOME</div>
 						<div ng-class="changeClass('info.html');" ng-click="changeInclude('info.html')" class="nav-item my-button">EXPERIENCE</div>
-						<div ng-class="changeClass('edu.html');" ng-click="changeInclude('info2.html')" class="nav-item my-button">EDUCATION</div>
-						<div ng-class="changeClass('info2.html');" ng-click="changeInclude('info2.html')" class="nav-item my-button">CATALOGS</div>
+						<div ng-class="changeClass('education.html');" ng-click="changeInclude('education.html')" class="nav-item my-button">EDUCATION</div>
+						<div ng-class="changeClass('projects.html');" ng-click="changeInclude('projects.html')" class="nav-item my-button">PROJECTS</div>
 						
 					</nav>
 					
@@ -47,7 +47,7 @@
 				<dir-message></dir-message>
 				<dir-image></dir-image>
 			<div class="loader {{classLoader}}"></div>
-			<div ng-include="htmlFile"  ng-touchstart='hideBar()' ng-click='hideBar()'  class="content-holder {{errorF}}">
+			<div ng-include="htmlFile" ng-class='{"shown" : shown}' ng-touchstart='hideBar()' ng-click='hideBar()'  class="content-holder {{errorF}}">
 			
 
 			</div>

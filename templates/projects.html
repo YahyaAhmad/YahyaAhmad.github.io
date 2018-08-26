@@ -1,0 +1,26 @@
+
+<div class="par-1">
+
+    <div class="heading-1">Projects which I have worked on:</div>
+
+    
+
+</div>
+
+<div class="container projects">
+    <div class="row">
+        <div class="col-12 col-sm-6 project" ng-repeat="project in projects">
+        
+            
+                
+                <div class="my-box">
+                    <div class="heading-2 box-header"> {{project.Name}} </div>
+                    <div ng-click='showProjectDetails(project)' class="photo-container"><img class="box-photo" src="{{project.img}}" alt=""></div>
+                </div>
+        
+        
+        
+        
+        </div> 
+    </div>
+</div>

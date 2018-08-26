@@ -19,6 +19,16 @@ app.directive('dirImage',function(){
 
 });
 
+// app.directive('projectsDir',function(){
+
+//     return{
+
+//         template:"<div class='heading-1'>{{projects.Name}} {{projects.dis}}</div>"
+
+//     };
+
+// });
+
 app.service('modalService',function(){
 
     this.makeMessage = function(type){
@@ -51,12 +61,28 @@ app.service('modalService',function(){
 
 app.controller("test",function($scope,$interval,$timeout,modalService,$sce){
 $scope.stop = undefined;
+$scope.started = false;
 $scope.showImagePopup = false;
 $scope.shown = false;
 $scope.exitClickable = true;
 $scope.showPopup = false;
 $scope.trust = $sce.trustAsHtml;
 $scope.imageUrl = 'image.jpeg';
+
+$scope.projects = [
+    {Name:"Gym System",img:"templates/photos/gym.png"},
+    {Name:"Amnkom",img:"templates/photos/amnkom.jpeg"}
+   
+];
+
+$scope.showProjectDetails = function(project){
+
+    var splitString = project.img.split('.');
+
+    alert(`Name: ${project.Name} - URL: ${splitString[0]}`);
+
+}
+
 $scope.toggleBar = function(){
 
     $scope.shown = !$scope.shown;
@@ -103,6 +129,7 @@ $scope.setInclude = function(file){
 }
 
 $scope.changeInclude = function(file){
+    if(!$scope.started) return;
     if($scope.htmlFile == `templates/${file}`) return;
     $scope.errorF = '';
     $scope.classLoader = '';
@@ -111,7 +138,7 @@ $scope.changeInclude = function(file){
 }
 
 $scope.changeClass = function(path){
-
+    if($scope.started)
     if(`templates/${path}` == $scope.htmlFile) return "activeTab";
 
 }
@@ -144,7 +171,10 @@ app.controller('pictureController',function($scope,$timeout){
     $scope.showPicture = true;
     angular.element(document).ready(function(){
 
-        $timeout(function(){ $scope.showPicture = false; $scope.$parent.htmlFile = 'templates/home.html'; },1500);
+        $timeout(function(){ $scope.showPicture = false;
+            $scope.$parent.htmlFile = 'templates/home.html';
+            $scope.$parent.started = true;
+        },1500);
 
     });
 
