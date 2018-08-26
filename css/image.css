@@ -6,14 +6,10 @@
     width: 400px;
     height: 400px;
     z-index: 101;
-    left: 0;
-    right: 0;
-    margin: auto;
-    top:0;
-    bottom: 0;
-   
- 
+
 }
+ 
+
 
 .image-popup img{
     width: 400px;
@@ -25,7 +21,7 @@
     width:65vw;
     border-radius: 0;
     height: fit-content;
-    display: table;
+    height: -moz-fit-content;
 }
 
 .not-circle img{
@@ -33,23 +29,51 @@
 }
 .image-popup.ng-hide-remove{
     opacity: 0;
+    transform: translate(-50%,-170%);
+}
+
+.image-popup.ng-hide-remove-active{
+    opacity: 1;
+    transform: translate(-50%,-50%);
+}
+
+.image-popup.ng-hide-add{
+    opacity: 1;
+    transform: translate(-50%,-50%);
+}
+
+.image-popup.ng-hide-add-active{
+    opacity: 0;
+    transform: translate(-50%,-170%);
+}
+/* 
+.image-popup.ng-hide-remove{
+    opacity: 0;
+    transform: translate(0,0);
     transform: translate3d(0,-100%,0);
 }
 
 .image-popup.ng-hide-remove-active{
     opacity: 1;
+    transform: translate(0,0);
     transform: translate3d(0,0,0);
 }
 
 .image-popup.ng-hide-add{
     opacity: 1;
+    transform: translate(0,0);
     transform: translate3d(0,0,0);
 }
 
 .image-popup.ng-hide-add-active{
     opacity: 0;
+    transform: translate(0,0);
     transform: translate3d(0,-100%,0);
+} */
+
+.centered-axis-xy {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
 }
-
-
-
