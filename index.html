@@ -19,7 +19,7 @@
 	<link rel="stylesheet" href="css/popup.css">
 	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 	<link rel="stylesheet" href="css/image.css">
-	<link rel="stylesheet" href="css/test.css">
+
 	
 
 </head>
@@ -43,7 +43,7 @@
 		
 				</div>
 		</div>
-		<div class="cache"><img ng-repeat="project in projects" src="{{project.img}}" alt=""></div>
+		<div class="cache" ng-repeat="project in projects"><img ng-repeat="image in project.images"  src="{{project.folder + image}}" alt=""></div>
 		<div class="body" >
 				<dir-message></dir-message>
 				<dir-image></dir-image>
