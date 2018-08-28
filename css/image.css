@@ -1,7 +1,7 @@
 .image-popup{
 
     border-radius: 50%;
-    position: absolute;
+    position: fixed;
     overflow: hidden;
     width: 400px;
     height: 400px;
@@ -22,6 +22,7 @@
     border-radius: 0;
     height: fit-content;
     height: -moz-fit-content;
+    overflow: visible;
 }
 
 .not-circle img{
@@ -72,7 +73,7 @@
 } */
 
 .centered-axis-xy {
-    position: absolute;
+ 
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
@@ -88,4 +89,34 @@
 	.not-circle img{
 		width: 95vw;
     }
+}
+
+.arrow{
+    position: absolute;
+    z-index: 108;
+
+    margin: auto;
+    height: 27px;
+}
+
+.arrow.right{
+    right: -50px;
+    top: 0;
+    bottom: 0;
+}
+
+.arrow.left{
+    left: -50px;
+    top: 0;
+    bottom: 0;
+}
+
+.arrow i{
+    transform: scale(7);
+    color: white;
+}
+
+.sliderImage{
+    position: absolute;
+    
 }

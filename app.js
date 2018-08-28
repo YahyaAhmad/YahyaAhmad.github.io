@@ -39,7 +39,7 @@ app.service('modalService',function(){
             
             messageObject = {
             header: "CONTACT ME",
-            body: "<strong>yahyaahmad@gmail.com</strong>"
+            body: "<strong>mugewara1@gmail.com</strong>"
            };
         }
 
@@ -52,6 +52,12 @@ app.service('modalService',function(){
         }
 
         return messageObject;
+
+    }
+
+    this.getFolder = function(url){
+
+        alert(url);
 
     }
 
@@ -81,11 +87,8 @@ $scope.showPopup = false;
 $scope.trust = $sce.trustAsHtml;
 $scope.imageUrl = 'image.jpeg';
 
-$scope.projects = [
-    {Name:"Gym System",img:"templates/photos/gym.png"},
-    {Name:"Amnkom",img:"templates/photos/amnkom.jpeg"}
-   
-];
+
+
 
 $scope.showProjectDetails = function(project){
 
@@ -108,8 +111,17 @@ $scope.hideBar = function(){
 
 // $timeout(function(){ $scope.htmlFile = 'templates/home.html'; },500);
 
-$scope.changeImageShow = function(type){
+$scope.nextImage = function(){
     
+    if($scope.counter>=$scope.imagesFolder.length) return;
+    $scope.counter+=1;
+    
+    $scope.imageUrl =  $scope.imagesFolder[$scope.counter];
+    
+}
+
+$scope.changeImageShow = function(type){
+    var tempImage;
     if(type==''){
         if(!$scope.exitClickable) return;
         $scope.exitClickable = false;
@@ -118,9 +130,9 @@ $scope.changeImageShow = function(type){
         console.log("ChangeImage");
         return;
     }
-    if(type!='image.jpeg') $scope.notCircle = true;
-    else $scope.notCircle = false;
-    $scope.imageUrl = type;
+    if(type!='image.jpeg') {$scope.notCircle = true; tempImage = type.img; $scope.imagesFolder = type.folder; }
+    else {$scope.notCircle = false; tempImage = type; }
+    $scope.imageUrl = tempImage;
     $scope.exitClickable = true;
     $scope.showImagePopup = !$scope.showImagePopup;
 
@@ -193,6 +205,14 @@ $scope.$on("$includeContentError",function(event,templete){
     
 });
 
+app.directive('dirSlider',function(){
+
+    return {
+        templateUrl:"templates/slider.html"
+    };
+
+});
+
 app.controller('pictureController',function($scope,$timeout){
 
     $scope.showPicture = true;
@@ -207,5 +227,55 @@ app.controller('pictureController',function($scope,$timeout){
 
   
 
+
+});
+
+app.controller('sliderController',function($scope,$timeout){
+    $scope.counter = 0;
+    $scope.maxCount;
+    $scope.right = true;
+    $scope.showSliderPopup = false;
+    $scope.exitClickable = true;
+    $scope.folder = [];
+    $scope.projects = [
+        {Name:"Gym System",folder:"templates/photos/gym/",images:["0.png","1.png","2.png","3.png","4.png"],count:5},
+        {Name:"Amnkom",folder:"templates/photos/amnkom/",images:["0.jpeg","1.jpeg","2.jpeg","3.jpeg"],count:4}
+       
+    ];
+
+    $scope.changeSliderShow = function(project){
+        if(project==''){
+            $scope.showSliderPopup = false;
+            $timeout(function(){$scope.counter=0;},400);
+            return;
+        }
+        $scope.exitClickable = true;
+        $scope.activeProject = project;
+        $scope.showSliderPopup = true;
+
+    }
+
+    $scope.nextImage = function(){
+        if(!$scope.showSliderPopup) return;
+        $scope.right = true;
+        if($scope.counter+1==$scope.activeProject.count){
+            $timeout(function(){$scope.counter = 0;},10);
+            return;
+        }
+        $timeout(function(){$scope.counter += 1;},10);
+
+    }
+
+    $scope.prevImage = function(){
+        if(!$scope.showSliderPopup) return;
+        $scope.right = false;
+        if($scope.counter==0){
+            $timeout(function(){$scope.counter = $scope.activeProject.count - 1;},10);
+            return;
+        }
+        $timeout(function(){$scope.counter -= 1;},10);
+        
+
+    }
 
 });

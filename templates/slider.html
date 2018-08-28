@@ -1,0 +1,15 @@
+<div class="popup-modal"  >
+
+    <div ng-click="changeSliderShow('')" ng-show='showSliderPopup' class="black-background"></div>
+
+    <div class="image-popup centered-axis-xy not-circle"  ng-show='showSliderPopup' >
+        <div ng-repeat='image in activeProject.images' ng-class="{'imageBegin':exitClickable}">
+            <img class="sliderImage centered-axis-xy" ng-class="{'right-dir' : right}" ng-if="$index == counter" src="{{activeProject.folder + image}}" alt="">
+        </div>
+        <div  class="arrow right"><i ng-click='nextImage()' class="fas fa-angle-right"></i></div>
+        <div  class="arrow left"><i ng-click='prevImage()' class="fas fa-angle-left"></i></div>
+        <div> {{counter+1}}/{{maxCount}} </div>
+    </div>
+
+
+</div>

@@ -31,3 +31,60 @@
     transform: translate3d(-100%,0,0);
 }
 
+.sliderImage{
+    transition: 0.35s;
+}
+
+.sliderImage.ng-enter{
+    opacity: 0;
+    transform: translate(-150%,-50%);
+    
+}
+
+.sliderImage.ng-enter.ng-enter-active{
+    opacity: 1;
+    transform: translate(-50%,-50%);
+}
+
+
+.sliderImage.ng-leave{
+    opacity: 1;
+    transform: translate(-50%,-50%);
+    
+}
+
+.sliderImage.ng-leave.ng-leave-active{
+
+    opacity: 0;
+    transform: translate(150%,-50%);
+}
+
+
+.sliderImage.right-dir.ng-enter{
+    opacity: 0;
+    transform: translate(50%,-50%);
+    
+}
+
+.sliderImage.right-dir.ng-enter.ng-enter-active{
+    opacity: 1;
+    transform: translate(-50%,-50%);
+}
+
+
+.sliderImage.right-dir.ng-leave{
+    opacity: 1;
+    transform: translate(-50%,-50%);
+    
+}
+
+.sliderImage.right-dir.ng-leave.ng-leave-active{
+
+    opacity: 0;
+    transform: translate(-150%,-50%);
+}
+
+.imageBegin{
+    transition: 0s;
+}
+
