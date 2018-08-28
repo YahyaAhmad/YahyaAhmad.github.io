@@ -174,9 +174,12 @@ $scope.setInclude = function(file){
 $scope.changeInclude = function(file){
     if(!$scope.started) return;
     if($scope.htmlFile == `templates/${file}`) return;
+    $timeout.cancel($scope.timer);
+    $scope.finished = false;
     $scope.errorF = '';
     $scope.classLoader = '';
     $scope.htmlFile = `templates/${file}`;
+    $scope.timer = $timeout(function(){$scope.finished = true;},800);
     
 }
 
@@ -244,6 +247,7 @@ app.controller('sliderController',function($scope,$timeout){
 
 
     $scope.changeSliderShow = function(project){
+        if($scope.$parent.finished==false) return;
         if(project==''){
             $scope.showSliderPopup = false;
             $timeout(function(){$scope.counter=0;},400);
