@@ -145,12 +145,22 @@ $scope.changeImageShow = function(type){
 $document.bind('keydown', function(event){
     if(event.which===27){
         $scope.$apply(function(){
-            $scope.showImagePopup = false;
-            $scope.changeImageShow('');
+            
+            $scope.hideEverything();
+            
         });
+
         
     }
 });
+
+$scope.hideEverything = function(){
+    
+    $scope.showPopup = false;
+    $scope.showImagePopup = false;
+    $scope.exitClickable = false;
+     
+}
 
 $scope.changeShow = function(type){ 
 
@@ -237,13 +247,37 @@ app.controller('pictureController',function($scope,$timeout){
 
 });
 
-app.controller('sliderController',function($scope,$timeout){
+app.controller('sliderController',function($scope,$timeout,$document){
     $scope.counter = 0;
     $scope.maxCount;
     $scope.right = true;
     $scope.showSliderPopup = false;
     $scope.exitClickable = true;
     $scope.folder = [];
+
+    $document.bind('keydown', function(event){
+        if(event.which===27){
+            $scope.$apply(function(){
+                
+                $scope.changeSliderShow('');
+                
+            });
+            
+            
+        }
+
+        if(event.which===39){
+        
+                $timeout(function(){$scope.nextImage();});
+           
+        }
+
+        if(event.which===37){
+         
+                $timeout(function(){$scope.prevImage();});
+        
+        }
+    });
 
 
     $scope.changeSliderShow = function(project){

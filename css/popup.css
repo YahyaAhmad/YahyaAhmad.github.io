@@ -4,7 +4,7 @@
     height: 190px;
     background-color: white;
     z-index: 101;
-    position: absolute;
+    position: fixed;
     color:black;
     left: 0;
     right: 0;

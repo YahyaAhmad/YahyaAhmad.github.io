@@ -94,9 +94,15 @@
 .arrow{
     position: absolute;
     z-index: 108;
-
+    color: rgb(153, 153, 153);
     margin: auto;
     height: 27px;
+    transition: color 0.25s;
+    cursor: pointer;
+}
+
+.arrow:hover{
+    color:white;
 }
 
 .arrow.right{
@@ -113,10 +119,14 @@
 
 .arrow i{
     transform: scale(7);
-    color: white;
+    
 }
 
 .sliderImage{
     position: absolute;
+    
+}
+
+.box-photo{
     
 }

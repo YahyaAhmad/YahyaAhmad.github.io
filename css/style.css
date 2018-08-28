@@ -300,6 +300,7 @@ a:hover{
 	max-width: 33vw;
 	box-shadow:  2px 2px 0 0.01px white;
 	transition: box-shadow 1.5s;
+	cursor: pointer;
 	
 	
 }
