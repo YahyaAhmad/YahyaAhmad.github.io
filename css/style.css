@@ -284,9 +284,21 @@ a:hover{
 }
 
 .photo-container{
-	width: inherit;
-	height: 22vw;
+	height: 18vw;
 	position: relative;
+	overflow: hidden;
+    background-size: cover;
+	background-position: center;
+	box-shadow:  2px 2px 0 0.01px white;
+	transition: box-shadow 1.5s;
+	cursor: pointer;
+	width: 32vw;
+    margin: auto;
+}
+
+.photo-container:hover{
+	transition: box-shadow 0.25s;
+	box-shadow:  2px 2px 8px 1px rgb(87, 87, 87);
 }
 
 .box-photo{
@@ -298,16 +310,15 @@ a:hover{
 	top: 0;
 	bottom: 0;
 	max-width: 33vw;
-	box-shadow:  2px 2px 0 0.01px white;
-	transition: box-shadow 1.5s;
+	
+	
 	cursor: pointer;
 	
 	
 }
 
 .box-photo:hover{
-	transition: box-shadow 0.25s;
-	box-shadow:  2px 2px 8px 1px rgb(87, 87, 87);
+	
 }
 
 
@@ -422,6 +433,7 @@ button.toggle-button:active{
 .box-header{
 	text-align: center;
 	margin: 0;
+	padding-bottom: 15px;
 }
 
 
@@ -442,3 +454,4 @@ button.toggle-button:active{
 	position: fixed !important;
 	z-index: 10000 !important;
 }
+

@@ -88,8 +88,8 @@ $scope.trust = $sce.trustAsHtml;
 $scope.imageUrl = 'image.jpeg';
 
 $scope.projects = [
-    {Name:"Gym System",folder:"templates/photos/gym/",images:["0.png","1.png","2.png","3.png","4.png"],count:5},
-    {Name:"Amnkom",folder:"templates/photos/amnkom/",images:["0.jpeg","1.jpeg","2.jpeg","3.jpeg"],count:4}
+    {Name:"Gym System",folder:"templates/photos/gym/",images:["0.png","1.png","2.png","3.png","4.png"], url:"https://github.com/YahyaAhmad/QRCode-Gym-System",count:5},
+    {Name:"Amnkom",folder:"templates/photos/amnkom/",images:["0.jpeg","1.jpeg","2.jpeg","3.jpeg"],url:"",count:4}
    
 ];
 
@@ -247,7 +247,7 @@ app.controller('pictureController',function($scope,$timeout){
 
 });
 
-app.controller('sliderController',function($scope,$timeout,$document){
+app.controller('sliderController',function($scope,$timeout,$document,$window){
     $scope.counter = 0;
     $scope.maxCount;
     $scope.right = true;
@@ -279,7 +279,10 @@ app.controller('sliderController',function($scope,$timeout,$document){
         }
     });
 
-
+    $scope.navigate = function(url){
+        if(url==="") return;
+        $window.open(url, '_blank');
+    }
     $scope.changeSliderShow = function(project){
         if($scope.$parent.finished==false) return;
         if(project==''){

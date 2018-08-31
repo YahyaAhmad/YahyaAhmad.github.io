@@ -130,3 +130,15 @@
 .box-photo{
     
 }
+
+.photo-icon{
+    position: absolute;
+    transform: scale(1.4);
+    color: rgb(245, 245, 245);
+    bottom: 10px;
+    right: 10px;
+}
+
+.photo-icon:hover{
+    color:rgb(156, 156, 156)
+}

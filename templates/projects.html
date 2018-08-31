@@ -17,7 +17,9 @@
                     
                     <div class="my-box">
                         <div class="heading-2 box-header"> {{project.Name}} </div>
-                        <div  class="photo-container"><img ng-click='changeSliderShow(project)' class="box-photo" src="{{project.folder + project.images[0]}}" alt=""></div>
+                        <div style="background-image:url('{{project.folder + project.images[0]}}')" ng-click='changeSliderShow(project)' class="photo-container">
+                                <i ng-click="navigate(project.url); $event.stopPropagation();" class="fab fa-github photo-icon" data-toggle="tooltip" data-placement="top" title="Project Link"></i>
+                        </div>
                     </div>
             
             
@@ -27,3 +29,11 @@
         </div>
     </div>
 </div>
+
+<script>
+
+    $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+
+</script>
