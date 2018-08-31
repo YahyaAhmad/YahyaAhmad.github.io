@@ -27,6 +27,7 @@
 
 .not-circle img{
     width: 65vw;
+    max-height: 33vw;
 }
 .image-popup.ng-hide-remove{
     opacity: 0;
@@ -141,4 +142,48 @@
 
 .photo-icon:hover{
     color:rgb(156, 156, 156)
+}
+
+.circleFlex{
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    width: 100px;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+    bottom: -20vw;
+    height: 50px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s;
+}
+
+.circleFlex i{
+    color:rgb(143, 143, 143);
+    margin: 0px 2px;
+    transition: color 0.35s, font-size 0.1s;
+    -webkit-transform: translateZ(0);
+    font-size: 12pt;
+    cursor: pointer;
+    
+}
+
+.circleFlex i.active{
+    color:rgb(233, 233, 233);
+    margin: 0px 3px;
+    font-size: 14pt;
+    cursor: auto;
+    
+}
+
+.circleFlex i:hover{
+    color:rgb(190, 190, 190);
+}
+
+.circleFlex.ready{
+    opacity: 1;
+    visibility: visible;
 }

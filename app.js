@@ -254,6 +254,7 @@ app.controller('sliderController',function($scope,$timeout,$document,$window){
     $scope.showSliderPopup = false;
     $scope.exitClickable = true;
     $scope.folder = [];
+    $scope.ready = false;
 
     $document.bind('keydown', function(event){
         if(event.which===27){
@@ -286,6 +287,7 @@ app.controller('sliderController',function($scope,$timeout,$document,$window){
     $scope.changeSliderShow = function(project){
         if($scope.$parent.finished==false) return;
         if(project==''){
+            $scope.ready=false;
             $scope.showSliderPopup = false;
             $timeout(function(){$scope.counter=0;},400);
             return;
@@ -293,7 +295,17 @@ app.controller('sliderController',function($scope,$timeout,$document,$window){
         $scope.exitClickable = true;
         $scope.activeProject = project;
         $scope.showSliderPopup = true;
+        $timeout(function(){$scope.ready=true;},550);
 
+    }
+
+    $scope.setImage = function(index){
+        if(index>$scope.counter)
+            $scope.right = true;
+        else
+            $scope.right = false;
+
+        $timeout(function(){$scope.counter=index;},10);
     }
 
     $scope.nextImage = function(){
