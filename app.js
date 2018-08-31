@@ -1,4 +1,4 @@
-var app = angular.module("pageApp",["ngAnimate","ngTouch"]);
+var app = angular.module("pageApp",["ngAnimate","ngTouch","ngTouchOJ"]);
 
 app.directive('dirMessage',function(){
 

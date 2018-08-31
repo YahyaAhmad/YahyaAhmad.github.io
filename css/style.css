@@ -330,10 +330,13 @@ a:hover{
 		height: 37vw;
 		max-width: 78vw;
 	}
-
+	.circleFlex{
+		bottom: -33vw;
+	}
 
 	.photo-container{
-		height: 50vw;
+		height: 30vw;
+  		width: 60vw;
 	}
 
 	.ps-picture{

@@ -4,7 +4,7 @@
 
     <div class="image-popup centered-axis-xy not-circle"  ng-show='showSliderPopup' >
         <div ng-repeat='image in activeProject.images' ng-class="{'imageBegin':exitClickable}">
-            <img class="sliderImage centered-axis-xy" ng-class="{'right-dir' : right}" ng-if="$index == counter" src="{{activeProject.folder + image}}" alt="">
+            <img ng-swipe-left="nextImage()" ng-swipe-right="prevImage()" class="sliderImage centered-axis-xy" ng-class="{'right-dir' : right}" ng-if="$index == counter" src="{{activeProject.folder + image}}" alt="">
         </div>
         <div ng-class="{'ready' : ready}" class="circleFlex"><i ng-click="setImage($index)" ng-repeat="image in activeProject.images" ng-class="{'active' : $index == counter}" class="fas fa-circle circle-item"></i></div>
         <div  class="arrow right"><i ng-click='nextImage()' class="fas fa-angle-right"></i></div>

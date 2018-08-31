@@ -80,6 +80,23 @@
     transform: translate(-50%,-50%);
 }
 
+.circleFlex{
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    width: 100px;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+    bottom: -20vw;
+    height: 50px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s;
+}
+
 @media (max-width: 576px) {
 
 	.not-circle{
@@ -88,8 +105,13 @@
 	}
 
 	.not-circle img{
-		width: 95vw;
+        width: 95vw;
+        max-height: 51vw;
     }
+
+    .circleFlex{
+		bottom: -33vw;
+	}
 }
 
 .arrow{
@@ -144,22 +166,7 @@
     color:rgb(156, 156, 156)
 }
 
-.circleFlex{
-    display: flex;
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    width: 100px;
-    margin-right: auto;
-    align-items: center;
-    justify-content: center;
-    bottom: -20vw;
-    height: 50px;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.5s;
-}
+
 
 .circleFlex i{
     color:rgb(143, 143, 143);

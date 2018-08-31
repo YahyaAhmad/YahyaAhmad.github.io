@@ -1,6 +1,6 @@
 "use strict";
 
-angular.module("ngTouch", [])
+angular.module("ngTouchOJ", [])
 .directive("ngTouchstart", function () {
     return {
         controller: ["$scope", "$element", function ($scope, $element) {
