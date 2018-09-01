@@ -321,6 +321,30 @@ a:hover{
 	
 }
 
+@media (max-height: 450px) {
+
+	.ps-picture{
+		
+		opacity: 0;
+		transform: translate3d(0,-100%,0);
+		visibility: hidden;
+	}
+
+	.content-holder{
+		height: 88vh;
+		transition: height 0.5s;
+	}
+
+	.header{
+		
+		height: 10vh;
+	}
+
+	.bottom{
+		height: 100%;
+    	align-items: center;
+	}
+}
 
 @media (max-width: 576px) {
 
@@ -330,9 +354,7 @@ a:hover{
 		height: 37vw;
 		max-width: 78vw;
 	}
-	.circleFlex{
-		bottom: -33vw;
-	}
+
 
 	.photo-container{
 		height: 30vw;
