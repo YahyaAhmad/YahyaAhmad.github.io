@@ -286,9 +286,13 @@ app.controller('sliderController',function($scope,$timeout,$document,$window){
         if(url==="") return;
         $window.open(url, '_blank');
     }
+
+    var timerSlider;
+
     $scope.changeSliderShow = function(project){
         if($scope.$parent.finished==false) return;
         if(project==''){
+            $timeout.cancel(timerSlider);
             $scope.ready=false;
             $scope.showSliderPopup = false;
             $timeout(function(){$scope.counter=0;},400);
@@ -297,7 +301,7 @@ app.controller('sliderController',function($scope,$timeout,$document,$window){
         $scope.exitClickable = true;
         $scope.activeProject = project;
         $scope.showSliderPopup = true;
-        $timeout(function(){$scope.ready=true;},550);
+        timerSlider = $timeout(function(){$scope.ready=true;},550);
 
     }
 
