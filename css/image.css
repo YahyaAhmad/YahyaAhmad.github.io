@@ -147,7 +147,13 @@
 
 .sliderImage{
     position: absolute;
+    opacity: 0;
     
+    
+}
+
+.sliderImage.shown{
+	opacity: 1;
 }
 
 .box-photo{
