@@ -91,8 +91,8 @@ $scope.imageUrl = 'image.jpeg';
 
 $scope.projects = [
     {Name:"Gym System",folder:"templates/photos/gym/",images:["0.png","1.png","2.png","3.png","4.png"], url:"https://github.com/YahyaAhmad/QRCode-Gym-System",count:5},
-    {Name:"Amnkom",folder:"templates/photos/amnkom/",images:["0.jpeg","1.jpeg","2.jpeg","3.jpeg"],url:"",count:4}
-   
+    {Name:"Amnkom",folder:"templates/photos/amnkom/",images:["0.jpeg","1.jpeg","2.jpeg","3.jpeg"],url:"",count:4},
+    {Name:"Yahya Ahmad CV",folder:"templates/photos/website/",images:["0.png"],url:"https://github.com/YahyaAhmad/YahyaAhmad.github.io",count:1}
 ];
 
 

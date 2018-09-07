@@ -480,6 +480,3 @@ button.toggle-button:active{
 	z-index: 10000 !important;
 }
 
-sliderImage.shown{
-	opacity: 1;
-}
