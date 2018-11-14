@@ -480,3 +480,9 @@ button.toggle-button:active{
 	z-index: 10000 !important;
 }
 
+span.at{
+	position: relative;
+    	top: -5px;
+    	right: 7px;
+	font-size: 11pt;
+}
