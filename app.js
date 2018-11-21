@@ -325,6 +325,10 @@ app.controller('sliderController',function($scope,$timeout,$document,$window){
 
     }
 
+    $scope.openImageUrl = function(imageUrl){
+        window.open(imageUrl);
+    }
+
     $scope.prevImage = function(){
         if(!$scope.showSliderPopup) return;
         $scope.right = false;
