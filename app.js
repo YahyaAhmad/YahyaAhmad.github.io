@@ -1,5 +1,6 @@
 var app = angular.module("pageApp",["ngAnimate","ngTouch","ngTouchOJ"]);
 
+
 app.directive('dirMessage',function(){
 
     return{
@@ -94,6 +95,23 @@ $scope.projects = [
     {Name:"Amnkom",folder:"templates/photos/amnkom/",images:["0.jpeg","1.jpeg","2.jpeg","3.jpeg"],url:"",count:4},
     {Name:"Yahya Ahmad CV",folder:"templates/photos/website/",images:["0.png"],url:"https://github.com/YahyaAhmad/YahyaAhmad.github.io",count:1}
 ];
+
+$scope.skills = [
+    {name: "HTML/CSS", class: 'excellent', tooltip: "I excell in HTML and CSS"},
+    {name: "Javascript/JQuery", class: 'excellent', tooltip: "I excell in JS and JQuery"},
+    {name: "ReactJS", class: 'very-good', tooltip: "I'm very good at ReactJS"},
+    {name: "C#", class: 'very-good', tooltip: "I'm very good at C#"},
+    {name: "PHP", class: 'very-good', tooltip: "I'm very good at PHP"},
+    {name: "Drupal", class: 'very-good', tooltip: "I'm very good at Drupal"},
+    {name: "Node.js", class: 'good', tooltip: "I'm good at Node.js"},
+    {name: "AngularJS", class: 'good', tooltip: "I'm good at AngularJS"},
+
+    {name: "ASP.net forms", class: 'familiar', tooltip:"I have worked with ASP.net"},
+    {name: "Sound Design", class: 'familiar', tooltip:'I have worked at sound designing'},
+    {name: "Poster Design", class: 'familiar', tooltip:'I have worked at poster designing'},
+    {name: "Photoshop", class: 'familiar', tooltip:"I'm familiar with Photoshop" },
+
+]
 
 
 $scope.showProjectDetails = function(project){
@@ -208,6 +226,7 @@ $scope.$on("$includeContentLoaded",function(event,templete){
     console.log("The stop was defined, stop now is undefined.");
     $interval.cancel($scope.stop);
     $scope.stop = undefined;
+    
     }
 
 

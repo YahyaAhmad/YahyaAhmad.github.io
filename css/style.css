@@ -153,13 +153,13 @@ a:hover{
 	font-weight: 500;
 	font-size: 21pt;
 	font-family: Saira Extra Condensed,serif;
+	margin-bottom: 10px;
 }
 
 .heading-2{
 	font-size: 14pt;
 	color: #888;
 	margin-left: 20px;
-	margin-top: 10px;
 	
 }
 
@@ -485,4 +485,81 @@ span.at{
     	top: -5px;
     	right: 7px;
 	font-size: 11pt;
+}
+
+.skill{
+	
+	display: inline-block;
+	margin: 3px 5px;
+	padding: 2px 5px;
+	color: white;
+	border-radius: 7px;
+	user-select: none;
+}
+
+.skill.excellent{
+	background: #96a323;
+	animation: shine 4s ease-in-out 0.1s infinite normal;
+}
+
+
+.skill.very-good{
+	background: #96a323;
+}
+
+.skill.good{
+	background: #1b3d99;
+}
+
+.skill.familiar{
+	background: #5782f9;
+}
+
+.skills-flexbox{
+	display: flex;
+	justify-content: left;
+	flex-wrap: wrap;
+
+}
+
+
+@keyframes shine {
+    0% {background: #96a323;}
+	50% { background: #c8d839;}
+	100% { background: #96a323; }
+}
+
+.tooltip .arrow::before{
+	border-top-color:#5782f9 !important;
+	border-bottom-color:#96a323 !important; 
+}
+
+.tooltip .tooltip-inner{
+	background-color: #5782f9 !important;
+	max-width: 250px !important;
+}
+
+.tooltip.excellent .tooltip-inner{
+	background-color: #96a323 !important;
+	animation: shine 4s ease-in-out 0.1s infinite normal !important;
+}
+
+.tooltip.excellent .arrow::before{
+	border-top-color:#96a323 !important;  	border-bottom-color:#96a323 !important; 
+}
+
+.tooltip.very-good .tooltip-inner{
+	background-color: #96a323 !important;
+}
+
+.tooltip.very-good .arrow::before{
+	border-top-color:#96a323 !important;  	border-bottom-color:#96a323 !important; 
+}
+
+.tooltip.good .tooltip-inner{
+	background-color: #1b3d99 !important;
+}
+
+.tooltip.good .arrow::before{
+	border-top-color:#1b3d99 !important;
 }

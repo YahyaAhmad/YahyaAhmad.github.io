@@ -1,26 +1,47 @@
-<div class="par-1">
-    <span class="heading-1">Drupal Consultant & Designer</span>
-    <span class="heading-2" ><span class="at" style="font-size:11pt;">At</span> Sprintive Company <br><span style="font-size:12pt;">2018/09/28 - Now</span></span>
-    <span class="body-1">
-    
-        - Used Drupal to design several websites. <br>
-        - Used ReactJS with Drupal to design interactive apps. <br>
-        - Worked with templates using Sass(CSS compiler). <br>
-        - Used Redux in ReactJS.
-    
-    </span>
-</div>
-
-<div class="par-1">
-    <span class="heading-1">C#/ASP.Net Developer</span>
-    <span class="heading-2" ><span class="at" style="font-size:11pt;">At</span> Arrow IT Solutions Company<br><span style="font-size:12pt;">2018/01/01 - 2018/9/25</span></span>
-    <span class="body-1">
-    
-        - Trained as a C#/ASP.net developer. <br>
-        - Worked in developing front end design. <br>
-        - Understanding in back end technology (ASP.net and node.js). <br>
-    
-    </span>
+<div class="row">
+    <div class="col-sm-8">
+        <div class="par-1">
+            <span class="heading-1">Drupal Consultant & Designer</span>
+            <span class="heading-2" ><span class="at" style="font-size:11pt;">At</span> Sprintive Company <br><span style="font-size:12pt;">2018/09/28 - Now</span></span>
+            <span class="body-1">
+            
+                - Used Drupal to design several websites. <br>
+                - Used ReactJS with Drupal to design interactive apps. <br>
+                - Worked with templates using Sass(CSS compiler). <br>
+                - Used Redux in ReactJS.
+            
+            </span>
+        </div>
+        <div class="tooltip bs-tooltip-top" role="tooltip">
+                <div class="arrow"></div>
+                <div class="tooltip-inner">
+                  Some tooltip text!
+                </div>
+              </div>
+        <div class="par-1">
+            <span class="heading-1">C#/ASP.Net Developer</span>
+            <span class="heading-2" ><span class="at" style="font-size:11pt;">At</span> Arrow IT Solutions Company<br><span style="font-size:12pt;">2018/01/01 - 2018/9/25</span></span>
+            <span class="body-1">
+            
+                - Trained as a C#/ASP.net developer. <br>
+                - Worked in developing front end design. <br>
+                - Understanding in back end technology (ASP.net and node.js). <br>
+            
+            </span>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="skills">
+            <div class="heading-1">
+            	Skills
+            </div>
+            <div class="skills-flexbox">
+                <div class="skill" ng-class="skill.class" data-toggle='tooltip' data-template='<div class="tooltip {{skill.class}}" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>' data-placement='top' title="{{skill.tooltip}}"  ng-repeat="skill in skills" >
+                    {{skill.name}}
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="par-1">
@@ -50,5 +71,14 @@
     </span>
 </div>
 
+<script>
+
+    $(document).ready(
+        () => {
+            $('[data-toggle="tooltip"]').tooltip();
+        }
+    );
+
+</script>
 
     
