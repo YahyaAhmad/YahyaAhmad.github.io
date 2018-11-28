@@ -178,7 +178,7 @@ a:hover{
 
 
 .par-1{
-	margin-top: 55px;
+	margin-bottom: 40px;
 }
 
 .par-1:first-of-type{
@@ -191,6 +191,10 @@ a:hover{
 
 .par-2:first-child{
 	margin-top: 0;
+}
+
+.content-holder>.par-1:last-of-type{
+	margin-bottom: 0;
 }
 
 .centerBox{
