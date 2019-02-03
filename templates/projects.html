@@ -18,7 +18,9 @@
                     <div class="my-box">
                         <div class="heading-2 box-header"> {{project.Name}} </div>
                         <div style="background-image:url('{{project.folder + project.images[0]}}')" ng-click='changeSliderShow(project)' class="photo-container">
-                                <i ng-click="navigate(project.url); $event.stopPropagation();" class="fab fa-github photo-icon" data-toggle="tooltip" data-placement="top" title="Project Link"></i>
+                                <div class="shadowy-background">
+                                    <i ng-click="navigate(project.url); $event.stopPropagation();" class="fas fa-link photo-icon" data-toggle="tooltip" data-placement="top" title="Link"></i>
+                                </div>
                         </div>
                     </div>
             

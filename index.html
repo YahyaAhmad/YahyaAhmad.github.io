@@ -29,7 +29,7 @@
 	<div class="container-fluid" ng-controller="test">
 
 		<div class="header-parent">
-			<div ng-controller="pictureController"  ng-hide="showPicture" ng-click='changeImageShow("image.jpeg")' class="ps-picture"></div>
+			<div ng-controller="pictureController" ng-class="imageShown"  ng-hide="showPicture" ng-click='changeImageShow("image.jpeg")' class="ps-picture">	</div>
 			<div class="header" ng-class='{"shown" : shown}'>
 					
 					<button  ng-click='toggleBar()' class="toggle-button"><i class="fas fa-bars"></i></button>

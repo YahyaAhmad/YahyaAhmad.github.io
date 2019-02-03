@@ -87,7 +87,7 @@ $scope.exitClickable = true;
 $scope.showPopup = false;
 $scope.trust = $sce.trustAsHtml;
 $scope.imageUrl = 'image.jpeg';
-
+$scope.imageShown = '';
 
 
 $scope.projects = [
@@ -227,9 +227,8 @@ $scope.$on("$includeContentLoaded",function(event,templete){
     console.log("The stop was defined, stop now is undefined.");
     $interval.cancel($scope.stop);
     $scope.stop = undefined;
-    
     }
-
+    $scope.imageShown = "shown";
 
 });
 
