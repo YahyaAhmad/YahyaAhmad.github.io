@@ -40,7 +40,7 @@ app.service('modalService',function(){
             
             messageObject = {
             header: "CONTACT ME",
-            body: "<strong>mugewara1@gmail.com</strong>"
+            body: "<strong>yahya@sprintive.com</strong>"
            };
         }
 
