@@ -1,0 +1,74 @@
+html {
+    direction: rtl;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'El Messiri', sans-serif;
+    font-weight: bold;
+}
+
+body {
+    text-align: right !important;
+    font-size: 18px;
+    font-family: 'DroidArabicNaskhRegular';
+
+}
+
+p {
+    font-weight: 600;
+}
+
+img {
+    max-width: 100%;
+}
+
+.title {
+    text-align: center;
+    background: rgba(119, 173, 144, 0.949);
+    padding: 10px 0;
+    color: white;
+    font-weight: bold;
+}
+
+.slider {
+    position: relative;
+}
+
+.slider .item {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    transition: opacity 0.3s,visibility 0.3s;
+}
+.slider .item.show {
+    opacity: 1;
+    visibility: visible;
+    position: static;
+
+}
+
+.slider .floating {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    font-size: 36px;
+}
+
+.white {
+    color: white;
+}
+
+.shadow {
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,0.7259278711484594) 19%, rgba(0,0,0,0) 68%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.article h3 {
+    margin-top: 10px;
+}
